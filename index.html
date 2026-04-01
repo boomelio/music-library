@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DotDotDot — Music Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <audio id="audioPlayer"></audio>
+
+  <nav>
+    <div class="logo">Dot<em>···</em>Tunes</div>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn">☾ Dark</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-eyebrow"><span>✦</span> Real tracks from iTunes · Curated for this moment</div>
+    <h1>Music that says<br>what you <em>can't.</em></h1>
+    <div class="search-row">
+      <div class="search-wrap">
+        <span class="search-icon">↳</span>
+        <input type="text" placeholder="Artist, album, or vibe…" id="searchInput"/>
+      </div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div class="pills" id="genrePills"></div>
+    <div class="right-controls">
+      <select class="sort-select" id="sortSelect">
+        <option value="">Sort…</option>
+        <option value="az">Title A→Z</option>
+        <option value="za">Title Z→A</option>
+        <option value="artist">Artist A→Z</option>
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+        <option value="price">Price ↑</option>
+        <option value="duration">Duration ↑</option>
+      </select>
+      <span class="count-tag" id="countTag"><strong>20</strong> tracks</span>
+    </div>
+  </div>
+
+  <div class="grid-wrap" id="grid"></div>
+
+  <div class="mini-player" id="miniPlayer">
+    <span class="close-player" id="closePlayer">✕</span>
+    <img class="player-art" id="playerArt" src="" alt=""/>
+    <div class="player-info">
+      <div class="player-album" id="playerAlbum"></div>
+      <div class="player-title" id="playerTitle"></div>
+      <div class="player-artist" id="playerArtist"></div>
+      <div class="progress-wrap">
+        <div class="waveform" id="waveform">
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-time" id="progressTime">0:00</div>
+      </div>
+    </div>
+    <div class="player-controls">
+      <button class="ctrl-btn play" id="playPauseBtn">▶</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="player.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
