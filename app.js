@@ -13,7 +13,7 @@ function getPreferredTheme() {
 }
 
 function updateThemeButton(theme) {
-  themeBtn.textContent = theme === 'dark' ? '☾ Dark' : '☀ Light';
+  themeBtn.textContent = theme === 'dark' ? '☀ Light' : '☾ Dark';
   themeBtn.setAttribute('aria-pressed', String(theme === 'dark'));
 }
 
